@@ -2,9 +2,13 @@ package com.example.weather.utils
 
 import android.content.Context
 import android.util.Base64
+import dagger.hilt.android.qualifiers.ApplicationContext
+import javax.inject.Inject
+import javax.inject.Singleton
 
 
-class SharedPreferencesUtil(context: Context) {
+@Singleton
+class SharedPreferencesUtil @Inject constructor(@ApplicationContext context: Context) {
 
     companion object{
         const val CITY_NAME = "city_name"
